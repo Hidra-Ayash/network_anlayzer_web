@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رفع ملف حركة الشبكة</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0a0a0a, #1c1c1c);
+      color: #e0f7fa;
+      font-family: 'Tajawal', sans-serif;
+      min-height: 100vh;
+    }
+    .upload-container {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 30px;
+      background: rgba(30, 30, 30, 0.8);
+      border-radius: 15px;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 20px #00ffff88;
+    }
+    .upload-btn {
+      background: #00ffff;
+      color: #0a0a0a;
+      border: none;
+      font-weight: bold;
+    }
+    .upload-btn:hover {
+      background: #0ff0fc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="upload-container text-center">
+      <h1 class="mb-4"><i class="fas fa-file-upload"></i> رفع ملف حركة الشبكة</h1>
+      <p class="mb-4">قم بتحميل ملف <strong>.pcap</strong> لتحليل حركة الشبكة وعرضها على الخريطة</p>
+      
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <input class="form-control" type="file" name="file" accept=".pcap" required>
+        </div>
+        <button type="submit" class="btn upload-btn btn-lg">
+          <i class="fas fa-cloud-upload-alt"></i> بدء التحليل
+        </button>
+      </form>
+      
+      <div class="mt-4">
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i> سيتم تحليل الملف وعرض النتائج خلال لحظات
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نتائج تحليل الشبكة</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0a0a0a, #1c1c1c);
+      color: #e0f7fa;
+      font-family: 'Tajawal', sans-serif;
+    }
+    .results-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .map-frame {
+      height: 600px;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+    .file-info-card {
+      background: rgba(30, 30, 30, 0.8);
+      border-left: 4px solid #00ffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    }
+    .info-item {
+      border-bottom: 1px solid #333;
+      padding: 12px 0;
+    }
+    .info-item:last-child {
+      border-bottom: none;
+    }
+    .info-label {
+      color: #00ffff;
+      font-weight: bold;
+    }
+    .info-value {
+      color: #e0f7fa;
+    }
+    .btn-analysis {
+      background: linear-gradient(to right, #00ffff, #0ff0fc);
+      color: #0a0a0a;
+      font-weight: bold;
+      border: none;
+    }
+    .btn-analysis:hover {
+      background: linear-gradient(to right, #0ff0fc, #00ffff);
+    }
+    .header-section {
+      border-bottom: 1px solid #00ffff;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container results-container">
+    <div class="header-section text-center">
+      <h1><i class="fas fa-network-wired"></i> نتائج تحليل حركة الشبكة</h1>
+      <p class="lead text-muted">التفاصيل الكاملة لتحليل ملف حركة المرور</p>
+    </div>
+    
+    <div class="row mb-4">
+      <div class="col-md-5">
+        <div class="file-info-card p-4">
+          <h4 class="text-center mb-4"><i class="fas fa-file-alt"></i> معلومات الملف</h4>
+          
+          <div class="info-item">
+            <div class="info-label">اسم الملف:</div>
+            <div class="info-value" id="filename">network_traffic.pcap</div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-label">حجم الملف:</div>
+            <div class="info-value" id="filesize">4.7 MB</div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-label">وقت التحليل:</div>
+            <div class="info-value" id="analysis-time">15 ثانية</div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-label">عدد الحزم:</div>
+            <div class="info-value" id="packets-count">12,847</div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-label">عدد العناوين:</div>
+            <div class="info-value" id="ip-count">127</div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-label">عدد الدول:</div>
+            <div class="info-value" id="country-count">14</div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-label">حالة التحليل:</div>
+            <div class="info-value"><span class="badge bg-success">مكتمل بنجاح</span></div>
+          </div>
+        </div>
+        
+        <div class="d-grid gap-2 mt-3">
+          <a href="/" class="btn btn-outline-light">
+            <i class="fas fa-redo"></i> تحليل ملف جديد
+          </a>
+          <a href="/map" class="btn btn-analysis">
+            <i class="fas fa-expand"></i> عرض الخريطة كاملة
+          </a>
+        </div>
+      </div>
+      
+      <div class="col-md-7">
+        <div class="map-frame">
+          <iframe src="/map" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="alert alert-dark">
+          <i class="fas fa-info-circle"></i> ملاحظة: يتم تخزين نتائج التحليل مؤقتاً وسيتم حذفها تلقائياً بعد مغادرة الصفحة.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+      // يمكنك استبدال هذه القيم ببيانات حقيقية من الخادم
+    
+      
+      $(document).ready(function() {
+          const fileInfo = {
+        name: "network_capture_2023.pcap",
+        size: "3.2 MB",
+        analysisTime: "8 ثواني",
+        packets: "9,431",
+        ips: "89",
+        countries: "11"
+      };
+    $('#filename').text("{{ file_info.filename }}");
+    $('#filesize').text("{{ file_info.filesize }}");
+    $('#analysis-time').text("{{ file_info.analysis_time }}");
+    $('#packets-count').text("{{ file_info.packets_count }}");
+    $('#ip-count').text("{{ file_info.ip_count }}");
+    $('#country-count').text("{{ file_info.country_count }}");
+    });
+    
+  </script>
+</body>
+</html>
