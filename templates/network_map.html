@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                <link rel="icon" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/geo-alt-fill.svg" type="image/svg+xml">
+                <title>الخريطة الجغرافية</title>
+            <style>
+                #map_8f58360572b53ef76492b69dae509496 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8f58360572b53ef76492b69dae509496" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8f58360572b53ef76492b69dae509496 = L.map(
+                "map_8f58360572b53ef76492b69dae509496",
+                {
+                    center: [45.0742356, 7.6299966],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a8dbc26f72a3dc15d64547ebf789c8ba = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a8dbc26f72a3dc15d64547ebf789c8ba.addTo(map_8f58360572b53ef76492b69dae509496);
+        
+    
+            var marker_cluster_cf1084e24943c16a6c45724eaf9037c6 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_58b968ae9908312b6f95068f25c56ef5 = L.marker(
+                [45.0742356, 7.6299966],
+                {
+}
+            ).addTo(marker_cluster_cf1084e24943c16a6c45724eaf9037c6);
+        
+    
+            var icon_4538999f3f5ede4dad87154d6f9b0a9a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "globe",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_103e782ac0c5089666c851b0ba36a73c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_641f09b78814afc2b4aee7d732f451d0 = $(`<div id="html_641f09b78814afc2b4aee7d732f451d0" style="width: 100.0%; height: 100.0%;">         <b>IP:</b> 142.251.143.131<br>         <b>Location:</b> Torino, Italy<br>         <b>Coordinates:</b> 45.0742, 7.6300         </div>`)[0];
+                popup_103e782ac0c5089666c851b0ba36a73c.setContent(html_641f09b78814afc2b4aee7d732f451d0);
+            
+        
+
+        marker_58b968ae9908312b6f95068f25c56ef5.bindPopup(popup_103e782ac0c5089666c851b0ba36a73c)
+        ;
+
+        
+    
+    
+                marker_58b968ae9908312b6f95068f25c56ef5.setIcon(icon_4538999f3f5ede4dad87154d6f9b0a9a);
+            
+    
+            var marker_c7d97dd5981b54de368a1b068a35a096 = L.marker(
+                [45.0742356, 7.6299966],
+                {
+}
+            ).addTo(marker_cluster_cf1084e24943c16a6c45724eaf9037c6);
+        
+    
+            var icon_1539d230caab634d7dbe9bd2edd93ac5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "globe",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eabd838d181271d3c43da6b8f403a4f5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3dac8892e32c74dbddc8e6caa2110e7e = $(`<div id="html_3dac8892e32c74dbddc8e6caa2110e7e" style="width: 100.0%; height: 100.0%;">         <b>IP:</b> 142.251.143.164<br>         <b>Location:</b> Torino, Italy<br>         <b>Coordinates:</b> 45.0742, 7.6300         </div>`)[0];
+                popup_eabd838d181271d3c43da6b8f403a4f5.setContent(html_3dac8892e32c74dbddc8e6caa2110e7e);
+            
+        
+
+        marker_c7d97dd5981b54de368a1b068a35a096.bindPopup(popup_eabd838d181271d3c43da6b8f403a4f5)
+        ;
+
+        
+    
+    
+                marker_c7d97dd5981b54de368a1b068a35a096.setIcon(icon_1539d230caab634d7dbe9bd2edd93ac5);
+            
+    
+            var marker_227dd23fb0e072d83ad3800e32f0102d = L.marker(
+                [45.0742356, 7.6299966],
+                {
+}
+            ).addTo(marker_cluster_cf1084e24943c16a6c45724eaf9037c6);
+        
+    
+            var icon_697783d70cb07b4e904bfe890c29109a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "globe",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80281cc1857a2c305f179b064bc81068 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_642f81a78134cb38ffc7e89bd1133725 = $(`<div id="html_642f81a78134cb38ffc7e89bd1133725" style="width: 100.0%; height: 100.0%;">         <b>IP:</b> 142.251.143.174<br>         <b>Location:</b> Torino, Italy<br>         <b>Coordinates:</b> 45.0742, 7.6300         </div>`)[0];
+                popup_80281cc1857a2c305f179b064bc81068.setContent(html_642f81a78134cb38ffc7e89bd1133725);
+            
+        
+
+        marker_227dd23fb0e072d83ad3800e32f0102d.bindPopup(popup_80281cc1857a2c305f179b064bc81068)
+        ;
+
+        
+    
+    
+                marker_227dd23fb0e072d83ad3800e32f0102d.setIcon(icon_697783d70cb07b4e904bfe890c29109a);
+            
+    
+            var marker_ee8a59e4dfac037458e1d48b05c6a672 = L.marker(
+                [45.0742356, 7.6299966],
+                {
+}
+            ).addTo(marker_cluster_cf1084e24943c16a6c45724eaf9037c6);
+        
+    
+            var icon_e11375098501aea42838132fe8a72dfa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "globe",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_781cf77b0cc4af86cfbe7af616dcab25 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_34d99563b8925f218ec9d969a8e31af2 = $(`<div id="html_34d99563b8925f218ec9d969a8e31af2" style="width: 100.0%; height: 100.0%;">         <b>IP:</b> 142.251.143.194<br>         <b>Location:</b> Torino, Italy<br>         <b>Coordinates:</b> 45.0742, 7.6300         </div>`)[0];
+                popup_781cf77b0cc4af86cfbe7af616dcab25.setContent(html_34d99563b8925f218ec9d969a8e31af2);
+            
+        
+
+        marker_ee8a59e4dfac037458e1d48b05c6a672.bindPopup(popup_781cf77b0cc4af86cfbe7af616dcab25)
+        ;
+
+        
+    
+    
+                marker_ee8a59e4dfac037458e1d48b05c6a672.setIcon(icon_e11375098501aea42838132fe8a72dfa);
+            
+    
+            var marker_394e6c78d11abf76fee08663b588ae74 = L.marker(
+                [45.070312, 7.6868565],
+                {
+}
+            ).addTo(marker_cluster_cf1084e24943c16a6c45724eaf9037c6);
+        
+    
+            var icon_7fa3202f72ca64177d8f4a939d95fa5b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "globe",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51e3054821bc4d8a48701731f5ebc998 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7e4c921c93177e770e52c95ff7a1c2bb = $(`<div id="html_7e4c921c93177e770e52c95ff7a1c2bb" style="width: 100.0%; height: 100.0%;">         <b>IP:</b> 142.251.143.99<br>         <b>Location:</b> Turin, Italy<br>         <b>Coordinates:</b> 45.0703, 7.6869         </div>`)[0];
+                popup_51e3054821bc4d8a48701731f5ebc998.setContent(html_7e4c921c93177e770e52c95ff7a1c2bb);
+            
+        
+
+        marker_394e6c78d11abf76fee08663b588ae74.bindPopup(popup_51e3054821bc4d8a48701731f5ebc998)
+        ;
+
+        
+    
+    
+                marker_394e6c78d11abf76fee08663b588ae74.setIcon(icon_7fa3202f72ca64177d8f4a939d95fa5b);
+            
+    
+            marker_cluster_cf1084e24943c16a6c45724eaf9037c6.addTo(map_8f58360572b53ef76492b69dae509496);
+        
+</script>
+</html>

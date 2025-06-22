@@ -1,0 +1,48 @@
+{
+    "filename": "network_project3.pcap",
+    "filesize": "0.01 MB",
+    "analysis_time": "10 \u062b\u0648\u0627\u0646\u064a",
+    "packets_count": 5,
+    "ip_count": 5,
+    "country_count": 1,
+    "country_distribution": {
+        "Italy": 5
+    },
+    "geo_data": [
+        {
+            "ip": "142.251.143.131",
+            "lat": 45.0742356,
+            "lon": 7.6299966,
+            "country": "Italy",
+            "city": "Torino"
+        },
+        {
+            "ip": "142.251.143.164",
+            "lat": 45.0742356,
+            "lon": 7.6299966,
+            "country": "Italy",
+            "city": "Torino"
+        },
+        {
+            "ip": "142.251.143.174",
+            "lat": 45.0742356,
+            "lon": 7.6299966,
+            "country": "Italy",
+            "city": "Torino"
+        },
+        {
+            "ip": "142.251.143.194",
+            "lat": 45.0742356,
+            "lon": 7.6299966,
+            "country": "Italy",
+            "city": "Torino"
+        },
+        {
+            "ip": "142.251.143.99",
+            "lat": 45.070312,
+            "lon": 7.6868565,
+            "country": "Italy",
+            "city": "Turin"
+        }
+    ]
+}
